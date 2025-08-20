@@ -10,14 +10,16 @@
         <img :src="tool.icon" />
       </div>
       <span>{{ tool.title }}</span>
-      <el-dialog
-        v-model="showArray.length"
-        width="500"
-      >
-        <JsonTool v-if="tool.name === 'JsonTool'" v-model:show="tool.isShow" />
-        <UnixTool v-if="tool.name === 'UnixTool'" v-model:show="tool.isShow" />
-      </el-dialog>
     </div>
+    <el-dialog
+        v-model="showDialog"
+      >
+        <JsonTool v-if="toolName === 'JsonTool'" />
+        <UnixTool v-if="toolName === 'UnixTool'" />
+        <ColorTool v-if="toolName === 'ColorTool'" />
+        <QrCodeTool v-if="toolName === 'QrCodeTool'" />
+        <OcrTool v-if="toolName === 'OcrTool'" />
+      </el-dialog>
   </div>
 </template>
 
@@ -25,19 +27,46 @@
 import { ref, reactive } from "vue";
 import JsonTool from "@/views/AppMenu/jsonTool/Index.vue";
 import UnixTool from "@/views/AppMenu/UnixTrans/Index.vue";
+import ColorTool from "@/views/AppMenu/ColorTool/Index.vue";
+import QrCodeTool from "@/views/AppMenu/QrCodeTool/Index.vue";
+import OcrTool from "@/views/AppMenu/OcrTool/Index.vue";
+import jsonIcon from "@/assets/images/menu/JSON.svg";
+import timeTransIcon from "@/assets/images/menu/timeTrans.svg";
+import colorIcon from "@/assets/images/menu/color.svg";
+import qrcodeIcon from "@/assets/images/menu/qrcode.svg";
+import ocrIcon from "@/assets/images/menu/ocr.svg";
 const showArray = ref([]);
-
+const showDialog = ref(false);
+const toolName = ref("");
 const tools = reactive([
   {
     name: "JsonTool",
-    icon: "@/assets/images/menu/JSON.svg",
-    title: "JSON格式化",
+    icon: jsonIcon,
+    title: "JSON美化",
     isShow: false,
   },
   {
     name: "UnixTool",
-    icon: "@/assets/images/menu/timeTrans.svg",
+    icon: timeTransIcon,
     title: "时间戳转换",
+    isShow: false,
+  },
+  {
+    name: "ColorTool",
+    icon: colorIcon,
+    title: "颜色选择器",
+    isShow: false,
+  },
+  {
+    name: "QrCodeTool",
+    icon: qrcodeIcon,
+    title: "URL转二维码",
+    isShow: false,
+  },
+  {
+    name: "OcrTool",
+    icon: ocrIcon,
+    title: "图片文字识别",
     isShow: false,
   },
 ]);
@@ -49,6 +78,8 @@ const openTool = (val) => {
   }
   tools[val].isShow = true;
   showArray.value.push(val);
+  showDialog.value = true;
+  toolName.value = tools[val].name;
 };
 </script>
 

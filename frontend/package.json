@@ -1,6 +1,7 @@
 {
   "name": "ee",
   "version": "4.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite --host --port 8080",
     "serve": "vite --host --port 8080",
@@ -10,6 +11,8 @@
   },
   "dependencies": {
     "element-plus": "^2.10.7",
+    "qrcode": "^1.5.4",
+    "tesseract.js": "^6.0.1",
     "vue": "^3.5.12",
     "vue-router": "^4.0.14"
   },

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="props.show" class="timestamp-converter">
+  <div class="timestamp-converter">
     <div class="converter-header">
       <h1>时间戳转换工具</h1>
       <p>支持时间戳与日期时间之间的相互转换</p>
@@ -107,10 +107,6 @@
 
 <script setup>
 import { ref } from 'vue'
-const props = defineProps({
-  show: Boolean,
-});
-const emit = defineEmits(["update:show"]);
 // 输入和输出数据
 const timestampInput = ref('')
 const dateTimeInput = ref('')

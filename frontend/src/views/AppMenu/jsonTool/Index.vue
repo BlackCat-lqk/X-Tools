@@ -1,5 +1,5 @@
 <template>
-  <div v-if="props.show" class="json-tool-box">
+  <div class="json-tool-box">
     <div class="tool-content-box">
       <textarea
         v-model="inputJson"
@@ -47,17 +47,13 @@
           />
         </label>
       </div>
-      <button class="close-btn" @click="emit('update:show', false)">close</button>
+      <el-button class="close-btn" @click="emit('update:show', false)">close</el-button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, watch } from "vue";
-const props = defineProps({
-  show: Boolean,
-});
-const emit = defineEmits(["update:show"]);
 const inputJson = ref("");
 const formattedJson = ref("");
 const hasError = ref(false);
