@@ -19,6 +19,8 @@
         <ColorTool v-if="toolName === 'ColorTool'" />
         <QrCodeTool v-if="toolName === 'QrCodeTool'" />
         <OcrTool v-if="toolName === 'OcrTool'" />
+        <BarCodeTool v-if="toolName === 'BarCodeTool'" />
+        <FileComparator v-if="toolName === 'FileComparator'" />
       </el-dialog>
   </div>
 </template>
@@ -30,11 +32,16 @@ import UnixTool from "@/views/AppMenu/UnixTrans/Index.vue";
 import ColorTool from "@/views/AppMenu/ColorTool/Index.vue";
 import QrCodeTool from "@/views/AppMenu/QrCodeTool/Index.vue";
 import OcrTool from "@/views/AppMenu/OcrTool/Index.vue";
+import BarCodeTool from "@/views/AppMenu/BarCodeTool/Index.vue";
+import FileComparator from "@/views/AppMenu/FileComparator/Index.vue";
+
 import jsonIcon from "@/assets/images/menu/JSON.svg";
 import timeTransIcon from "@/assets/images/menu/timeTrans.svg";
 import colorIcon from "@/assets/images/menu/color.svg";
 import qrcodeIcon from "@/assets/images/menu/qrcode.svg";
 import ocrIcon from "@/assets/images/menu/ocr.svg";
+import barCodeIcon from "@/assets/images/menu/barCode.svg";
+import fileComparatorIcon from "@/assets/images/menu/FileComparator.svg";
 const showArray = ref([]);
 const showDialog = ref(false);
 const toolName = ref("");
@@ -67,6 +74,18 @@ const tools = reactive([
     name: "OcrTool",
     icon: ocrIcon,
     title: "图片文字识别",
+    isShow: false,
+  },
+  {
+    name: "BarCodeTool",
+    icon: barCodeIcon,
+    title: "条形码生成器",
+    isShow: false,
+  },
+  {
+    name: "FileComparator",
+    icon: fileComparatorIcon,
+    title: "文件对比",
     isShow: false,
   },
 ]);
