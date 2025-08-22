@@ -1,7 +1,7 @@
 {
   "name": "ee",
-  "version": "4.1.0",
-  "description": "A fast, desktop software development framework",
+  "version": "1.0.0",
+  "description": "Tool Collection Treasure Chest, powerful, free and comprehensive",
   "main": "./public/electron/main.js",
   "scripts": {
     "dev": "ee-bin dev",
@@ -26,7 +26,7 @@
     "electron-egg",
     "ElectronEgg"
   ],
-  "author": "lqk, Inc.",
+  "author": "LQK",
   "license": "Apache",
   "devDependencies": {
     "@electron/rebuild": "^3.7.1",
