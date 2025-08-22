@@ -1,5 +1,35 @@
+html { 
+  height: 100%;
+}
+body { 
+  height: calc(100% - 8px);
+  background: url('@/assets/icon.png') no-repeat center;
+  background-size: contain;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  backdrop-filter: blur(50px);
+  padding: 0 8px 8px 8px;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

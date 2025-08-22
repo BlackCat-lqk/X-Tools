@@ -12,16 +12,17 @@ module.exports = () => {
     singleLock: true,
     windowsOption: {
       title: 'X-Tools', // 软件顶部或左上角名称(会被 html中的 title标签覆盖)
-      width: 980,
-      height: 650,
-      minWidth: 400,
-      minHeight: 300,
+      width: 1250,
+      height: 740,
+      minWidth: 1250,
+      minHeight: 720,
       webPreferences: {
         //webSecurity: false, // 如果需要跨域，请打开注释
         contextIsolation: false, // false -> 可在渲染进程中使用electron的api，true->需要bridge.js(contextBridge)
         nodeIntegration: true, // node模块
         //preload: path.join(getElectronDir(), 'preload', 'bridge.js'),
       },
+      autoHideMenuBar: true, // 隐藏菜单栏
       frame: true,
       show: true,
       icon: path.join(getBaseDir(), 'public', 'images', 'logo-32.png'),
