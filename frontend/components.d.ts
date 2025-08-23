@@ -12,5 +12,6 @@ declare module 'vue' {
     ElDialog: typeof import('element-plus/es')['ElDialog']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchView: typeof import('./src/components/SearchView.vue')['default']
   }
 }
