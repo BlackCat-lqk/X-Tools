@@ -6,20 +6,23 @@
 <br>
 
 <div align=center>
+<img src="./public/images/example/logo.png" width="150" height="150" />
+</div>
+<br>
+
+<div align=center>
 <h3><strong>Description: Developed based on the electron-egg framework, the front-end project is built on Vue 3.0.</strong></h3>
 </div>
 <br>
 
-<div align=center>
 ![](./public/images/example/X-Tools1.png) 
-</div>
 <br>
 
 <div align=center>
 Welcome to visit my blog：https://mixblog.cn/
-![](./public/images/example/mixblog.png) 
 </div>
 <br>
+![](./public/images/example/mixblog.png) 
 
 ## Environment Preparation:
 node >= 20.0.0

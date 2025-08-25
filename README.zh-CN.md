@@ -4,22 +4,23 @@
 <h3>🎉🎉🎉 X-Tools v1.0.0 已经发布! 🎉🎉🎉</h3>
 </div>
 <br>
-
+<div align=center>
+<img src="./public/images/example/logo.png" width="150" height="150" />
+</div>
+<br>
 <div align=center>
 <h3><strong>描述：基于electron-egg框架开发，前端项目基于vue3.0开发</strong></h3>
 </div>
 <br>
 
-<div align=center>
 ![](./public/images/example/X-Tools1.png) 
-</div>
 <br>
 
 <div align=center>
-欢迎您访问我的博客：https://mixblog.cn/
-![](./public/images/example/mixblog.png) 
+欢迎您访问我的博客：https://mixblog.cn/ 
 </div>
 <br>
+![](./public/images/example/mixblog.png)
 
 ## 环境准备：
 node >= 20.0.0
